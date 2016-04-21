@@ -1,0 +1,72 @@
+Classes:
+	User
+	Admin
+	Hand
+	Card
+	
+	User Class:
+	
+		Variables:
+		1. UserId
+		2. UserName
+		3. Password
+		4. WinPercentage (covers stats requirement for admin page)
+		5. HighScore (for scoreboard - orderBy highscore)
+		6. Wins
+		7. Losses
+		8. BJ_Scored
+		9. CreditCardNumber
+		10. Balance (cash paid into BJ account)
+		
+		Methods:
+		1. register()
+		2. updatePassword()
+		3. login()
+		4. playGame()
+		5. addMoney()
+	
+	
+	Admin Class:
+	
+		Variables:
+		1. AdminId
+		2. Password
+		
+		Methods:
+		1. setMinBid()
+		2. setMaxBid()
+		3. updatePlayerStats()
+		4. updateScoreBoard()
+
+	
+	Hand Class: 
+		Variables:
+		1. UserId
+		2. CardId
+	
+		Methods:
+		1. addCard()
+		2. getValue() -> game logic
+			
+			**Game Logic**
+			1. Bet
+			2. Deal
+			3. Hit
+			4. Stand
+			5. Scoring -> update stats in User table
+		
+	
+	Card Class:
+		Variables:
+		1. CardId (1-52)
+		2. PokerOrder
+		3. Name
+		4. Image
+		
+		Methods:
+		1. dealCard()
+		2. shuffle()
+		
+		
+	
+		
